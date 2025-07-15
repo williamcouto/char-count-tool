@@ -8,14 +8,38 @@
 <body>
     <header>
           <h1>Transforme seus textos. Eleve sua escrita.</h1>
+          <p>Cole seu texto, defina o limite e veja a contagem em tempo real.</p>
     </header>
     <section>
           <div class="container-limits">
-               <p>Defina o limite de caracteres com base na plataforma</p>
+               <p>Definir o limite de caracteres com base na plataforma</p>
                <div class="social-limits">
-                    <button class="bttns-social" data-social="instagram">instagram</button>
+                    <button class="bttns-social" data-social="instagram">Instagram</button>
+                    <button class="bttns-social" data-social="facebook">Facebook</button>
+                    <button class="bttns-social" data-social="linkedln">Linkedln</button>
                </div>
+               <p>Limite de caracteres:</p>
           </div>
+
+          <!--Textarea-->
+          <div class="container-text">
+               <textarea id="" cols="55" rows="20" placeholder="Comece a digitar..."></textarea>
+          </div>
+
+          <section class="stats">
+               <div class="container-stats">
+                    <!--Caracteres-->
+                    <div id="stat-char"> 
+                         <p>00</p>
+                         <p>Caracteres</p>
+                    </div>
+                    <!--Paragrafos-->
+                    <div id="stat-para">
+                         <p>00</p>
+                         <p>Paragráfos</p>
+                    </div>
+               </div>
+          </section>
     </section> 
 </body>
 </html>
