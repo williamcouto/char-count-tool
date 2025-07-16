@@ -18,3 +18,18 @@ header{
      flex-direction: column;
      padding: 4px;
 }
+.social-limits{
+     margin-bottom: 15px;
+}
+.bttns-social{
+     width: 100px;
+     height: 27px;
+     padding: 4px;
+     border-radius: 5px;
+     cursor: pointer;
+     border: none;
+}
+.bttns-social:hover{
+     background-color: #000;
+     color: #fff;
+}
