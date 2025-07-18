@@ -1,36 +1,36 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
      <meta charset="UTF-8">
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <title>Contador de caracteres</title>
      <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
-    <header>
+     <header>
           <h1>Transforme seus textos. Eleve sua escrita.</h1>
           <p>Cole seu texto, defina o limite e veja a contagem em tempo real.</p>
-    </header>
-    <section>
-          <div class="container-limits">
-               <p>Definir o limite de caracteres com base na plataforma</p>
-               <div class="social-limits">
-                    <button class="bttns-social" data-social="instagram">Instagram</button>
-                    <button class="bttns-social" data-social="facebook">Facebook</button>
-                    <button class="bttns-social" data-social="linkedln">Linkedln</button>
-               </div>
-               <p>Limite de caracteres:</p>
-          </div>
-
+     </header>
+     <section>
           <!--Textarea-->
           <div class="container-text">
                <textarea id="" cols="55" rows="20" placeholder="Comece a digitar..."></textarea>
           </div>
 
           <section class="stats">
+               <div class="container-limits">
+                    <p>Definir o limite de caracteres com base na plataforma</p>
+                    <div class="social-limits">
+                         <button class="bttns-social" data-social="instagram">Instagram</button>
+                         <button class="bttns-social" data-social="facebook">Facebook</button>
+                         <button class="bttns-social" data-social="linkedln">Linkedln</button>
+                    </div>
+               </div>
                <div class="container-stats">
                     <!--Caracteres-->
-                    <div id="stat-char"> 
+                    <div id="stat-char">
                          <p>00</p>
                          <p>Caracteres</p>
                     </div>
@@ -51,6 +51,7 @@
                     </div>
                </div>
           </section>
-    </section> 
+     </section>
 </body>
+
 </html>
