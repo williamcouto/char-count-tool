@@ -57,10 +57,20 @@ select{
      padding: 4px;
      border-radius: 3px;
 }
+#btn-limits{
+     width: 90px;
+     height: 30px;
+     background-color: #252525;
+     color: #fff;
+     border: none;
+     cursor: pointer;
+     border-radius: 3px;
+}
 textarea{
      width: 90%;
      height: 100%;
      padding: 10px;
      border: 1px solid #00000049;
      border-radius: 4px;
+     margin-top: 20px;
 }
