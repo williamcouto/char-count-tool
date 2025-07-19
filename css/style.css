@@ -7,40 +7,60 @@
 
 section{
      display: grid;
-     grid-template-columns: 1fr 1fr;
+     grid-template-columns: 2fr 1fr;
+     grid-template-rows: 1fr;
      padding: 5px;
-     margin: 4px;
+     margin: 10px;
 }
 header{
      margin: 10px;
 }
+header > p{
+     font-size: 14px;
+     font-weight: lighter;
+     color: #6b6b6b;
+}
 .container-limits{
      background-color: #fcfcfc;
      padding: 10px;
+     width: 550px;
+     height: 170px;
 }
 .stats{
      display: flex;
      flex-direction: column;
+     align-items: self-end;
      justify-items: center;
 }
 .container-stats{
      display: flex;
      flex-direction: row;
-     justify-content: space-around;
-     flex-wrap: wrap;
+     justify-items: center;
+     gap: 15px;
 }
 .container-stats > div{
      border: 1px solid #00000034;
+     border-radius: 3px;
+     background-color: #ffff;
+     text-align: center;
+     font-size: 1.2em;
      padding: 20px;
 }
 .social-limits{
      margin-bottom: 15px;
 }
 select{
-     width: 250px;
+     width: 240px;
      height: 30px;
      cursor: pointer;
      border: 1px solid #00000049;
      padding: 4px;
      border-radius: 3px;
+}
+textarea{
+     width: 90%;
+     height: 100%;
+     padding: 10px;
+     border: 1px solid #00000049;
+     border-radius: 4px;
 }
