@@ -20,43 +20,41 @@ header{
      margin: 10px;
 }
 header > p{
-     font-size: 14px;
+     font-size: 13px;
      font-weight: lighter;
      color: #6b6b6b;
 }
-.container-limits{
-     padding: 10px;
-     width: 420px;
-     height: 170px;
-}
 .stats{
      display: flex;
-     justify-items: center;
-     justify-content: flex-start;
+     flex-direction: column;
+     align-items: flex-end;
+     justify-content: start;
 }
 .container-stats{
-     display: flex;
-     flex-direction: column;
-     justify-items: flex-end;
+     display: grid;
+     grid-template-columns: 1fr 1fr;
+     gap: 11px;
      align-items: center;
      justify-content: center;
-     gap: 13px;
 }
 .container-stats > div{
-     flex-direction: row;
-     border: 1px solid #00000034;
+     border: 1px solid #00000023;
      border-radius: 3px;
      background-color: var(--stats-color-bg);
-     text-align: center;
-     font-size: 1.2em;
+     font-size: 1.1em;
      padding: 20px;
-     width: 90px;
+     width: 87px;
+     text-align: center;
 }
 .social-limits{
-     margin-bottom: 15px;
+     display: flex;
+     flex-direction: column;
+     align-items: flex-end;
+     gap: 7px;
+     margin-bottom: 35px;
 }
 select{
-     width: 250px;
+     width: 100%;
      height: 30px;
      cursor: pointer;
      border: 1px solid #00000049;
@@ -64,7 +62,7 @@ select{
      border-radius: 3px;
 }
 #btn-limits{
-     width: 90px;
+     width: 150px;
      height: 30px;
      background-color: #252525;
      color: #fff;
@@ -72,11 +70,14 @@ select{
      cursor: pointer;
      border-radius: 3px;
 }
+
 textarea{
-     width: 90%;
+     width: 85%;
      height: 100%;
      padding: 10px;
      border: 1px solid #00000049;
      border-radius: 4px;
      margin-top: 20px;
+     margin-left: 10px;
+     font-size: 18px;
 }

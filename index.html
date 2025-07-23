@@ -19,9 +19,7 @@
                <textarea id="" cols="60" rows="20" placeholder="Comece a digitar..."></textarea>
           </div>
 
-          <section class="stats">
-               <div class="container-limits">
-                    
+          <section class="stats">     
                     <div class="social-limits">
                          <p>Definir o limite de caracteres com base na plataforma</p>
                          <select id="sel-social">
@@ -30,30 +28,26 @@
                          </select>
                          <input type="submit" value="Definir" id="btn-limits">
                     </div>
+                    <!--Estátisticas-->
+                    
                     <div class="container-stats">
-                         <h5>Estátisticas</h5>
-                         <!--Caracteres-->
-                         <div id="stat-char">
-                              <p>0</p>
+                         <div class="stat stat-char">
+                              <div><h4 data-value-char="0">0</h4></div>
                               <p>Caracteres</p>
                          </div>
-                         <!--Paragrafos-->
-                         <div id="stat-para">
-                              <p>0</p>
+                         <div class="stat stat-pagraf">
+                              <div><h4 data-value-pgrf="0">0</h4></div>
                               <p>Paragráfos</p>
                          </div>
-                         <!--Espaços-->
-                         <div id="stat-spaces">
-                              <p>0</p>
+                         <div class="stat stat-space">
+                              <div><h4 data-value-space="0">0</h4></div>
                               <p>Espaços</p>
                          </div>
-                         <!--Palavras-->
-                         <div id="stat-words">
-                              <p>0</p>
+                         <div class="stat stat-words">
+                              <div><h4 data-value-word="0">0</h4></div>
                               <p>Palavras</p>
                          </div>
                     </div>
-               </div>
           </section>
      </section>
 </body>
