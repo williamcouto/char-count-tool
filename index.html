@@ -11,45 +11,40 @@
 <body>
      <header>
           <h1>Transforme seus textos. Eleve sua escrita.</h1>
-          <p>Cole seu texto, defina o limite e veja a contagem em tempo real.</p>
      </header>
-     <section>
-          <!--Textarea-->
-          <div class="container-text">
-               <textarea id="" cols="60" rows="20" placeholder="Comece a digitar..."></textarea>
-          </div>
-
-          <section class="stats">     
-                    <div class="social-limits">
-                         <p>Definir o limite de caracteres com base na plataforma</p>
-                         <select id="sel-social">
-                              <option value="instagram">Instagram (2.200)</option>
-                              <option value="facebook">Facebook (5.000)</option>
-                         </select>
-                         <input type="submit" value="Definir" id="btn-limits">
-                    </div>
-                    <!--Estátisticas-->
-                    
-                    <div class="container-stats">
-                         <div class="stat stat-char">
-                              <div><h4 data-value-char="0">0</h4></div>
-                              <p>Caracteres</p>
-                         </div>
-                         <div class="stat stat-pagraf">
-                              <div><h4 data-value-pgrf="0">0</h4></div>
-                              <p>Paragráfos</p>
-                         </div>
-                         <div class="stat stat-space">
-                              <div><h4 data-value-space="0">0</h4></div>
-                              <p>Espaços</p>
-                         </div>
-                         <div class="stat stat-words">
-                              <div><h4 data-value-word="0">0</h4></div>
-                              <p>Palavras</p>
-                         </div>
-                    </div>
+     <main>
+          <section class="container-text">
+               <textarea id="user-text" cols="60" rows="20" placeholder="Comece a digitar seu texto..."></textarea>
           </section>
-     </section>
+
+          <section class="social-limits">
+               <label for="sel-social">Plataforma:</label>
+               <select id="sel-social">
+                    <option value="instagram">Instagram (2.200)</option>
+                    <option value="facebook">Facebook (5.000)</option>
+               </select>
+               <button id="btn-limits" type="button">Definir</button>
+          </section>
+
+          <section class="sect-stats">
+               <div class="stat" id="stat-char">
+                    <h4 data-value-char="0">0</h4>
+                    <p>Caracteres</p>
+               </div>
+               <div class="stat" id="stat-paragrf">
+                    <h4 data-value-pgrf="0">0</h4>
+                    <p>Parágrafos</p>
+               </div>
+               <div class="stat" id="stat-spaces">
+                    <h4 data-value-space="0">0</h4>
+                    <p>Espaços</p>
+               </div>
+               <div class="stat" id="stat-words">
+                    <h4 data-value-word="0">0</h4>
+                    <p>Palavras</p>
+               </div>
+          </section>
+     </main>
 </body>
 
 </html>
