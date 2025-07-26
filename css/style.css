@@ -1,83 +1,90 @@
 @charset 'UTF-8';
-*{
+* {
      margin: 0;
      padding: 0;
      font-family: Arial, sans-serif;
+     box-sizing: border-box;
 }
-
-:root{
-     --stats-color-bg: #FBFBFF;
+:root {
+     --color-elements: #7C238C;
+     --color-text: #2c2c2c;
+     --color-shadows-elems: #00000011;
 }
-
-section{
-     display: grid;
-     grid-template-columns: 2fr 1fr;
-     grid-template-rows: 1fr;
-     padding: 5px;
-     margin: 5px;
+header > h1{
+     font-size: 3em;
 }
-header{
+body{
      margin: 10px;
 }
-header > p{
-     font-size: 13px;
-     font-weight: lighter;
-     color: #6b6b6b;
-}
-.stats{
-     display: flex;
-     flex-direction: column;
-     align-items: flex-end;
-     justify-content: start;
-}
-.container-stats{
+main {
      display: grid;
      grid-template-columns: 1fr 1fr;
-     gap: 11px;
      align-items: center;
+     justify-items: center;
+     padding: 5px;
+     margin: 4px;
+     gap: 3em;
+}
+.sidebar{
+     display:grid;
+     grid-template-columns: 1fr;
+     justify-items: center;
+     align-items: center;
+}
+.stats-area{
+     display: grid;
+     grid-template-columns: 1fr 1fr;
+     gap: 8px;
      justify-content: center;
 }
-.container-stats > div{
+.stat {
      border: 1px solid #00000023;
      border-radius: 3px;
-     background-color: var(--stats-color-bg);
-     font-size: 1.1em;
-     padding: 20px;
-     width: 87px;
+     font-size: 1em;
+     line-height: 1.4em;
+     padding: 10px;
+     width: 120px;
+     height: 75px;
      text-align: center;
+}
+.stat > p{
+     color: var(--color-text);
+}
+.stat > h4{
+     font-size: 1.2em;
 }
 .social-limits{
      display: flex;
      flex-direction: column;
-     align-items: flex-end;
+     align-items: end;
      gap: 7px;
-     margin-bottom: 35px;
+     margin-bottom: 30px;
 }
-select{
-     width: 100%;
-     height: 30px;
+select {
+     width: 240px;
+     height: 33px;
      cursor: pointer;
      border: 1px solid #00000049;
-     padding: 4px;
+     padding: 5px;
      border-radius: 3px;
 }
-#btn-limits{
-     width: 150px;
-     height: 30px;
-     background-color: #252525;
+
+#btn-limits {
+     width: 110px;
+     height: 33px;
+     background-color: var(--color-elements);
      color: #fff;
      border: none;
      cursor: pointer;
      border-radius: 3px;
 }
 
-textarea{
-     width: 85%;
-     height: 100%;
+textarea {
+     width: 600px;
+     height: 440px;
      padding: 10px;
      border: 1px solid #00000049;
      border-radius: 4px;
      margin-top: 20px;
-     margin-left: 10px;
-     font-size: 18px;
+     font-size: 17px;
 }
