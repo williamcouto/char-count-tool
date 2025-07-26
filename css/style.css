@@ -6,20 +6,24 @@
      box-sizing: border-box;
 }
 :root {
-     --color-elements: #7C238C;
+     --color-elements: #5740C3;
      --color-text: #2c2c2c;
-     --color-shadows-elems: #00000011;
+     --color-shadows-elems: #00000033;
+     --color-error: #DC2626;
+     --color-success: #16A34A;
 }
 header > h1{
      font-size: 3em;
+     padding-left: 13px;
+     grid-column: 1 / span 3;
 }
 body{
      margin: 10px;
 }
 main {
      display: grid;
-     grid-template-columns: 1fr 1fr;
-     align-items: center;
+     grid-template-columns: repeat(11, 1fr);
+     align-items: flex-start;
      justify-items: center;
      padding: 5px;
      margin: 4px;
@@ -28,43 +32,44 @@ main {
 .sidebar{
      display:grid;
      grid-template-columns: 1fr;
-     justify-items: center;
      align-items: center;
+     gap: 2em;
+     grid-column: 7 / 10;
 }
 .stats-area{
      display: grid;
      grid-template-columns: 1fr 1fr;
-     gap: 8px;
-     justify-content: center;
+     gap: 11px;
+     justify-content: flex-end;
 }
-.stat {
-     border: 1px solid #00000023;
+.card-stat {
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     border: 1px solid #00000028;
      border-radius: 3px;
      font-size: 1em;
      line-height: 1.4em;
-     padding: 10px;
-     width: 120px;
+     padding: 22px;
+     width: 130px;
      height: 75px;
      text-align: center;
 }
-.stat > p{
-     color: var(--color-text);
-}
-.stat > h4{
-     font-size: 1.2em;
+.card-stat > p{
+     font-size: 1em;
 }
 .social-limits{
      display: flex;
      flex-direction: column;
-     align-items: end;
+     align-items: flex-end;
      gap: 7px;
-     margin-bottom: 30px;
+     margin-bottom: 12px;
 }
 select {
-     width: 240px;
+     width: 250px;
      height: 33px;
      cursor: pointer;
-     border: 1px solid #00000049;
+     border: 1px solid var(--color-shadows-elems);
      padding: 5px;
      border-radius: 3px;
 }
@@ -80,11 +85,12 @@ select {
 }
 
 textarea {
-     width: 600px;
-     height: 440px;
+     width: 100%;
+     height: 450px;
      padding: 10px;
-     border: 1px solid #00000049;
+     border: 1px solid var(--color-shadows-elems);
      border-radius: 4px;
      margin-top: 20px;
      font-size: 17px;
+     grid-column: 1 / span 9;
 }
