@@ -6,7 +6,6 @@
      <title>Contador de caracteres</title>
      <link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
      <header>
           <h1>Typia</h1>
@@ -17,18 +16,19 @@
           </section>
 
           <!--Configurações-->
-          <aside class="sidebar">
-               <div class="social-limits">
+          <section class="sidebar">
+               <form action="" class="social-limits">
                     <label for="sel-plataform">Plataforma:</label>
                     <select id="sel-plataform" name="sel-plataform">
                          <option value="instagram">Instagram (2.200)</option>
                          <option value="facebook">Facebook (5.000)</option>
                     </select>
                     <button id="btn-limits" type="button">Aplicar</button>
-               </div>
+               </form>
+
+               
 
                <section class="stats-area">
-                    <h2>Estatísticas</h2>
                     <div class="stat" id="stat-char">
                          <h4 data-value-char="0">0</h4>
                          <p>Caracteres</p>
@@ -46,7 +46,7 @@
                          <p>Palavras</p>
                     </div>
                </section>
-          </aside>
+          </section>
      </main>
 </body>
 
