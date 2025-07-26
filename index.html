@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
      <meta charset="UTF-8">
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,40 +9,44 @@
 
 <body>
      <header>
-          <h1>Transforme seus textos. Eleve sua escrita.</h1>
+          <h1>Typia</h1>
      </header>
      <main>
           <section class="container-text">
-               <textarea id="user-text" cols="60" rows="20" placeholder="Comece a digitar seu texto..."></textarea>
+               <textarea id="user-text" placeholder="Comece a digitar seu texto..."></textarea>
           </section>
 
-          <section class="social-limits">
-               <label for="sel-social">Plataforma:</label>
-               <select id="sel-social">
-                    <option value="instagram">Instagram (2.200)</option>
-                    <option value="facebook">Facebook (5.000)</option>
-               </select>
-               <button id="btn-limits" type="button">Definir</button>
-          </section>
+          <!--Configurações-->
+          <aside class="sidebar">
+               <div class="social-limits">
+                    <label for="sel-plataform">Plataforma:</label>
+                    <select id="sel-plataform" name="sel-plataform">
+                         <option value="instagram">Instagram (2.200)</option>
+                         <option value="facebook">Facebook (5.000)</option>
+                    </select>
+                    <button id="btn-limits" type="button">Aplicar</button>
+               </div>
 
-          <section class="sect-stats">
-               <div class="stat" id="stat-char">
-                    <h4 data-value-char="0">0</h4>
-                    <p>Caracteres</p>
-               </div>
-               <div class="stat" id="stat-paragrf">
-                    <h4 data-value-pgrf="0">0</h4>
-                    <p>Parágrafos</p>
-               </div>
-               <div class="stat" id="stat-spaces">
-                    <h4 data-value-space="0">0</h4>
-                    <p>Espaços</p>
-               </div>
-               <div class="stat" id="stat-words">
-                    <h4 data-value-word="0">0</h4>
-                    <p>Palavras</p>
-               </div>
-          </section>
+               <section class="stats-area">
+                    <h2>Estatísticas</h2>
+                    <div class="stat" id="stat-char">
+                         <h4 data-value-char="0">0</h4>
+                         <p>Caracteres</p>
+                    </div>
+                    <div class="stat" id="stat-paragrf">
+                         <h4 data-value-pgrf="0">0</h4>
+                         <p>Parágrafos</p>
+                    </div>
+                    <div class="stat" id="stat-spaces">
+                         <h4 data-value-space="0">0</h4>
+                         <p>Espaços</p>
+                    </div>
+                    <div class="stat" id="stat-words">
+                         <h4 data-value-word="0">0</h4>
+                         <p>Palavras</p>
+                    </div>
+               </section>
+          </aside>
      </main>
 </body>
 
