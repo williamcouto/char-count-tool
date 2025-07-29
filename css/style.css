@@ -16,12 +16,14 @@ header > h1{
      font-size: 3em;
      padding-left: 13px;
      grid-column: 1 / span 3;
+}
+header, textarea, body, select, #btn-limits{
      font-family: "Inter", Arial, Helvetica, sans-serif;
 }
 
 body{
      margin: 10px;
-     font-family: "Inter", Arial, Helvetica, sans-serif;
+     background: linear-gradient(to right, #fdfcfc, #ffff);
 }
 main {
      display: grid;
@@ -51,15 +53,16 @@ main {
      justify-content: center;
      border: 1px solid #00000028;
      border-radius: 3px;
+     gap: 5px;
      font-size: 1em;
      line-height: 1.4em;
-     padding: 22px;
+     padding: 10px;
      width: 130px;
-     height: 75px;
+     height: 80px;
      text-align: center;
 }
 .card-stat > p{
-     font-size: 1em;
+     font-size: 1.1em;
 }
 .social-limits{
      display: flex;
@@ -75,7 +78,6 @@ select {
      border: 1px solid var(--color-shadows-elems);
      padding: 5px;
      border-radius: 3px;
-     font-family: "Inter", Arial, Helvetica, sans-serif;
 }
 
 #btn-limits {
@@ -87,9 +89,12 @@ select {
      cursor: pointer;
      border-radius: 3px;
 }
-
+#btn-limits:hover{
+     background-color: #1D0821;
+     font-weight: bold;
+}
 textarea {
-     width: 660px;
+     width: 700px;
      height: 450px;
      padding: 10px;
      border: 1px solid var(--color-shadows-elems);
