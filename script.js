@@ -1,0 +1,1 @@
+let textarea = document.getElementById('user-textarea')
