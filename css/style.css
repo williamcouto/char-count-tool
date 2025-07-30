@@ -23,7 +23,6 @@ header, textarea, body, select, #btn-limits{
 
 body{
      margin: 10px;
-     background: linear-gradient(to right, #fdfcfc, #ffff);
 }
 main {
      display: grid;
@@ -57,12 +56,16 @@ main {
      font-size: 1em;
      line-height: 1.4em;
      padding: 10px;
-     width: 130px;
-     height: 80px;
+     width: 140px;
+     height: 85px;
      text-align: center;
 }
-.card-stat > p{
-     font-size: 1.1em;
+.card-stat p:nth-child(1){
+     font-weight: bolder;
+     font-size: 1.2em;
+}
+.card-stat p:nth-last-child(1){
+     color: var(--color-text);
 }
 .social-limits{
      display: flex;
