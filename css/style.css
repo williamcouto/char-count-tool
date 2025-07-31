@@ -17,7 +17,7 @@ header > h1{
      padding-left: 13px;
      grid-column: 1 / span 3;
 }
-header, textarea, body, select, #btn-limits{
+header, textarea, body, select, #btn-limits, #btn-clear{
      font-family: "Inter", Arial, Helvetica, sans-serif;
 }
 
@@ -90,12 +90,26 @@ select {
      color: #fff;
      border: none;
      cursor: pointer;
-     border-radius: 3px;
+     border-radius: 4px;
 }
 #btn-limits:hover{
      background-color: #1D0821;
      font-weight: bold;
 }
+#btn-clear{
+     width: 100px;
+     height: 30px;
+     border: 1px solid #000;
+     border-radius: 4px;
+     cursor: pointer;
+     background-color: transparent;
+     padding: 3px;
+}
+#btn-clear:hover{
+     background-color: #000;
+     color: #fff;
+}
+
 textarea {
      width: 700px;
      height: 450px;
@@ -105,4 +119,10 @@ textarea {
      margin-top: 20px;
      font-size: 17px;
      grid-column: 1 / span 9;
+}
+.container-text{
+     display: flex;
+     flex-direction: column;
+     align-items: flex-end;
+     gap: 10px;
 }
