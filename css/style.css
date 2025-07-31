@@ -97,7 +97,7 @@ select {
      font-weight: bold;
 }
 #btn-clear{
-     width: 100px;
+     width: 90px;
      height: 30px;
      border: 1px solid #000;
      border-radius: 4px;
@@ -109,7 +109,9 @@ select {
      background-color: #000;
      color: #fff;
 }
-
+.bx-trash{
+     padding-right: 4px;
+}
 textarea {
      width: 700px;
      height: 450px;
