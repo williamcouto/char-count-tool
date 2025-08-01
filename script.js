@@ -5,9 +5,9 @@ let btnClear = document.getElementById('btn-clear')
 
 // Limpar a area de texto
 function clearTextarea(){
-    textarea.innerHTML = ''
-    words.innerHTML = '0'
-    char.innerHTML = '0'
+    textarea.value = ''
+    words.textContent = '0'
+    char.textContent = '0'
 }
 
 // Contagem de caracteres
