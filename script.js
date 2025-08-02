@@ -58,8 +58,13 @@ function countNumberStat(){
     else{
         numStat.textContent = foundNums.length
     }
-
 }
+
+// Barra de progresso
+let counter = document.querySelector('[data-counter]')
+let select = document.getElementById('sel-plataform')
+let limitPlataform = document.querySelector('[data-limit]')
+let currentNum = document.querySelector('[data-current]')
 
 textarea.addEventListener('input', () => {
     countCharacter()
