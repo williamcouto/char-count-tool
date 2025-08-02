@@ -17,6 +17,9 @@ function clearTextarea(){
 function countCharacter() {
     let textareaUser = textarea.value.length
     char.textContent = textareaUser
+
+    currentNum.textContent = textareaUser
+    return textareaUser
 }
 
 // Contagem de Palavras
@@ -66,10 +69,20 @@ let select = document.getElementById('sel-plataform')
 let limitPlataform = document.querySelector('[data-limit]')
 let currentNum = document.querySelector('[data-current]')
 
+function updateProgressBar(textareaUser){
+    let progress = document.querySelector('[data-progress]')
+    progress.value = textareaUser
+}
+
+select.addEventListener('change', (e) => {
+    limitPlataform.textContent = e.target.value
+})
+
 textarea.addEventListener('input', () => {
-    countCharacter()
+    let lengthBar = countCharacter()
     countWords()
     countNumberStat()
+    updateProgressBar(lengthBar)
     countLines()
 })
 
