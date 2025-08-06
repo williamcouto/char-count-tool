@@ -4,9 +4,15 @@ let char = document.getElementById('stat-char')
 let numStat = document.getElementById('stat-numbers')
 let lines = document.getElementById('stat-lines')
 let btnClear = document.getElementById('btn-clear')
+let progress = document.querySelector('[data-progress]')
+let counter = document.querySelector('[data-counter]')
+let select = document.getElementById('sel-plataform')
+let limitPlataform = document.querySelector('[data-limit]')
+let currentNum = document.querySelector('[data-current]')
+
 
 // Limpar a area de texto
-function clearTextarea(){
+function clearTextarea() {
     textarea.value = ''
     words.textContent = '0'
     char.textContent = '0'
@@ -17,7 +23,6 @@ function clearTextarea(){
 function countCharacter() {
     let textareaUser = textarea.value.length
     char.textContent = textareaUser
-
     currentNum.textContent = textareaUser
     return textareaUser
 }
@@ -26,7 +31,7 @@ function countCharacter() {
 function countWords() {
     let wordUser = textarea.value
     // Verifica se o campo de texto está vazio
-    if(wordUser === ""){
+    if (wordUser === "") {
         words.textContent = 0
         return
     }
@@ -37,45 +42,52 @@ function countWords() {
 }
 
 //Contagem de Linhas
-function countLines(){
+function countLines() {
     let linesTxt = textarea.value
     let linesSegments = linesTxt.split(/\n/)
     // Se o conteudo estiver vazio, retorna a 0
-    if(linesTxt === ""){
+    if (linesTxt === "") {
         lines.innerHTML = 0
         return
-    } 
+    }
     lines.textContent = linesSegments.length
 }
 
 //Contagem de Números
-function countNumberStat(){
+function countNumberStat() {
     let numsTextarea = textarea.value
-    let regexNum = new RegExp(/\d/g) // expressão para aceitar cada digito individualmente
+    let regexNum = new RegExp(/\d/g)
+    //expressão para aceitar cada digito individualmente
     let foundNums = numsTextarea.match(regexNum)
 
     //Para evitar erro causado por acessar o tamanho de um elemento null
-    if(foundNums == null){
+    if (foundNums == null) {
         numStat.textContent = 0
     }
-    else{
+    else {
         numStat.textContent = foundNums.length
     }
 }
 
-// Barra de progresso
-let counter = document.querySelector('[data-counter]')
-let select = document.getElementById('sel-plataform')
-let limitPlataform = document.querySelector('[data-limit]')
-let currentNum = document.querySelector('[data-current]')
-
-function updateProgressBar(textareaUser){
-    let progress = document.querySelector('[data-progress]')
+function updateProgressBar(textareaUser) {
+    const limitNum = Number(limitPlataform.dataset.limit)
+    progress.max = limitNum
     progress.value = textareaUser
+    let percent = (textareaUser / limitNum) * 100
+
+    if (percent > 80) {
+        currentNum.classList.add('warning-limit')
+    }
+    else {
+        currentNum.classList.remove('warning-limit')
+    }
 }
 
-select.addEventListener('change', (e) => {
-    limitPlataform.textContent = e.target.value
+select.addEventListener('change', (Event) => {
+    const newLimit = Event.target.value
+    limitPlataform.dataset.limit = newLimit
+    limitPlataform.textContent = newLimit
+    updateProgressBar(textarea.value.length)
 })
 
 textarea.addEventListener('input', () => {
@@ -87,5 +99,5 @@ textarea.addEventListener('input', () => {
 })
 
 btnClear.onclick = () => {
-    clearTextarea()
+    clearTextarea();
 }
