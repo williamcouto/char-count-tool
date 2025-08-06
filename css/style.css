@@ -82,20 +82,6 @@ select {
      padding: 5px;
      border-radius: 3px;
 }
-
-#btn-limits {
-     width: 130px;
-     height: 33px;
-     background-color: var(--color-elements);
-     color: #fff;
-     border: none;
-     cursor: pointer;
-     border-radius: 4px;
-}
-#btn-limits:hover{
-     background-color: #1D0821;
-     font-weight: bold;
-}
 #btn-clear{
      width: 90px;
      height: 30px;
@@ -118,21 +104,20 @@ textarea {
      padding: 10px;
      border: 1px solid var(--color-shadows-elems);
      border-radius: 4px;
-     margin-top: 20px;
-     font-size: 17px;
+     margin-top: 12px;
+     font-size: 16px;
      grid-column: 1 / span 9;
 }
 .container-text{
      display: flex;
      flex-direction: column;
      align-items: flex-start;
-     gap: 8px;
+     gap: 5px;
 }
 
 progress{
-     width: 500px;
-     height: 25px;
-     padding: 3px;
+     width: 560px;
+     height: 28px;
 }
 .container-progress-bar{
      display: flex;
@@ -140,7 +125,8 @@ progress{
      align-items: center;
      gap: 20px;
 }
-#char-counter > span{
+#char-counter{
+     font-weight: bold;
      font-size: 1.1em;
      padding: 3px;
 }
