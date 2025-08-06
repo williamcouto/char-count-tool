@@ -17,6 +17,8 @@ function clearTextarea() {
     words.textContent = '0'
     char.textContent = '0'
     numStat.textContent = '0'
+    currentNum.textContent = '0'
+    currentNum.classList.remove('warning-limit')
 }
 
 // Contagem de caracteres
