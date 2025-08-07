@@ -10,7 +10,6 @@ let select = document.getElementById('sel-plataform')
 let limitPlataform = document.querySelector('[data-limit]')
 let currentNum = document.querySelector('[data-current]')
 
-
 // Limpar a area de texto
 function clearTextarea() {
     textarea.value = ''
@@ -77,12 +76,26 @@ function updateProgressBar(textareaUser) {
     progress.value = textareaUser
     let percent = (textareaUser / limitNum) * 100
 
-    if (percent > 80) {
+    if (percent > 100) {
         currentNum.classList.add('warning-limit')
+        getWarning()
     }
     else {
         currentNum.classList.remove('warning-limit')
     }
+}
+
+function getWarning(){
+    let notificationAlert = new Notyf()
+    notificationAlert.error({
+        message: "O limite de caracteres foi atingido!",
+        duration: 2000,
+        position: {
+            x: "center",
+            y: "top"
+        },
+        background: "#DC2626"
+    })
 }
 
 select.addEventListener('change', (Event) => {
