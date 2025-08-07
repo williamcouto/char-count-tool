@@ -5,6 +5,7 @@
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <title>Contador de caracteres</title>
      <link rel="stylesheet" href="css/style.css">
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.css">
      <link href='https://cdn.boxicons.com/fonts/basic/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
@@ -15,7 +16,7 @@
           <section class="container-text">
                <textarea id="user-textarea" placeholder="Comece a digitar seu texto..."></textarea>
                <button class="btn" id="btn-clear">
-               <i class='bx bx-trash'></i>Limpar
+                    <i class='bx bx-trash'></i>Limpar
                </button>
 
                <div class="container-progress-bar">
@@ -31,6 +32,7 @@
                <form class="social-limits">
                     <label for="sel-plataform">Plataforma:</label>
                     <select id="sel-plataform" name="sel-plataform">
+                         <option data-limit="5" value="5">5</option>
                          <option data-limit="2200" value="2200">Instagram (2.200)</option>
                          <option data-limit="5000" value="5000">Facebook (5.000)</option>
                     </select>
@@ -61,5 +63,6 @@
           </section>
      </main>
      <script src="script.js"></script>
+     <script src="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.js"></script>
 </body>
 </html>
