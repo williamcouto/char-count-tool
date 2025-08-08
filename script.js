@@ -78,14 +78,37 @@ function updateProgressBar(textareaUser) {
 
     if (percent > 100) {
         currentNum.classList.add('warning-limit')
-        getWarning()
+        getLimitNotification()
     }
     else {
         currentNum.classList.remove('warning-limit')
     }
+
+    // Calculo de caracteres restantes
+    let remainChar = limitNum - textareaUser
+    console.log(remainChar)
+    if(remainChar == limitNum / 2){
+        getWarning(remainChar)
+    }
 }
 
-function getWarning(){
+// Notificação para caracteres restantes
+function getWarning(remainChar){
+    let notificationChar = new Notyf()
+    notificationChar.error({
+        message: `Atenção: Resta ${remainChar} caracteres` ,
+        duration: 2100,
+        position: {
+            x : "center",
+            y: "top"
+        },
+        background: "#F59E0B"
+    }) 
+}
+
+
+// Notificação para limite excedido
+function getLimitNotification(){
     let notificationAlert = new Notyf()
     notificationAlert.error({
         message: "O limite de caracteres foi atingido!",
