@@ -18,6 +18,7 @@ function clearTextarea() {
     numStat.textContent = '0'
     currentNum.textContent = '0'
     currentNum.classList.remove('warning-limit')
+    progress.value = 0
 }
 
 // Contagem de caracteres
@@ -86,7 +87,6 @@ function updateProgressBar(textareaUser) {
 
     // Calculo de caracteres restantes
     let remainChar = limitNum - textareaUser
-    console.log(remainChar)
     if(remainChar == limitNum / 2){
         getWarning(remainChar)
     }
@@ -136,6 +136,6 @@ textarea.addEventListener('input', () => {
     countLines()
 })
 
-btnClear.onclick = () => {
+btnClear.addEventListener('click', () => {
     clearTextarea();
-}
+})
