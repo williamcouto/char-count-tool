@@ -85,8 +85,15 @@ function updateProgressBar(textareaUser) {
     }
 
     // Calculo de caracteres restantes
-    let remainChar = limitNum - textareaUser
+    let halfLimitNum = Math.floor(limitNum / 2)
+    let charRemain = limitNum - textareaUser
     
+    if(charRemain == halfLimitNum){
+        textNotification.open({
+            type: "warning",
+            message: `Atenção: Restam ${charRemain} caracteres`
+        })
+    }
 }
 
 let textNotification = new Notyf({
