@@ -3,6 +3,8 @@ let words = document.getElementById('stat-words')
 let char = document.getElementById('stat-char')
 let numStat = document.getElementById('stat-numbers')
 let lines = document.getElementById('stat-lines')
+let space = document.getElementById('stat-spaces')
+
 let btnClear = document.getElementById('btn-clear')
 let progress = document.querySelector('[data-progress]')
 let counter = document.querySelector('[data-counter]')
@@ -15,6 +17,7 @@ function clearTextarea() {
     textarea.value = ''
     words.textContent = '0'
     char.textContent = '0'
+    space.textContent = '0'
     numStat.textContent = '0'
     currentNum.textContent = '0'
     currentNum.classList.remove('warning-limit')
@@ -53,6 +56,13 @@ function countLines() {
         return
     }
     lines.textContent = linesSegments.length
+}
+
+// Contagem de Espaços
+function countSpaces(){
+    let spaceText = textarea.value
+    let spaces = spaceText.split(/\s+/g)
+    space.textContent = spaces.length
 }
 
 //Contagem de Números
@@ -124,10 +134,11 @@ select.addEventListener('change', (Event) => {
 
 textarea.addEventListener('input', () => {
     let lengthBar = countCharacter()
-    countWords()
-    countNumberStat()
-    updateProgressBar(lengthBar)
-    countLines()
+    countWords();
+    countNumberStat();
+    countSpaces();
+    updateProgressBar(lengthBar);
+    countLines();
 })
 
 btnClear.addEventListener('click', () => {
