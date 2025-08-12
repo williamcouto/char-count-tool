@@ -18,6 +18,7 @@ function clearTextarea() {
     words.textContent = '0'
     char.textContent = '0'
     space.textContent = '0'
+    lines.textContent = '0'
     numStat.textContent = '0'
     currentNum.textContent = '0'
     currentNum.classList.remove('warning-limit')
@@ -107,7 +108,7 @@ function updateProgressBar(textareaUser) {
 }
 
 let textNotification = new Notyf({
-    duration: 2100,
+    duration: 2000,
     position: {
         x: "center",
         y: "top"
@@ -120,6 +121,10 @@ let textNotification = new Notyf({
         {
             type: "warning",
             background: "#F59E0B"
+        },
+        {
+            type: "success",
+            background: "#16A43A"
         }
     ]
 })
@@ -130,6 +135,10 @@ select.addEventListener('change', (Event) => {
     limitPlataform.dataset.limit = newLimit
     limitPlataform.textContent = newLimit
     updateProgressBar(textarea.value.length)
+    textNotification.open({
+        type: "success",
+        message: "Limite definido!"
+    })
 })
 
 textarea.addEventListener('input', () => {
