@@ -5,6 +5,10 @@ let numStat = document.getElementById('stat-numbers')
 let lines = document.getElementById('stat-lines')
 let space = document.getElementById('stat-spaces')
 
+let progressBar = document.querySelector('.progress-bar')
+let fillProgress = document.querySelector('.progress-bar-fill')
+fillProgress.style.width = 0
+
 let btnClear = document.getElementById('btn-clear')
 let progress = document.querySelector('[data-progress]')
 let counter = document.querySelector('[data-counter]')
@@ -23,6 +27,8 @@ function clearTextarea() {
     currentNum.textContent = '0'
     currentNum.classList.remove('warning-limit')
     progress.value = 0
+    fillProgress.style.width = "0"
+    fillProgress.style.backgroundColor = '#5740C3'
 }
 
 // Contagem de caracteres
@@ -83,13 +89,14 @@ function countNumberStat() {
 
 function updateProgressBar(textareaUser) {
     const limitNum = Number(limitPlataform.dataset.limit)
-    progress.max = limitNum
-    progress.value = textareaUser
+    
     let percent = (textareaUser / limitNum) * 100
+    fillProgress.style.width = percent + '%'
+    fillProgress.value = Math.min(percent, 100)
 
     if (percent > 100) {
         currentNum.classList.add('warning-limit')
-        
+        fillProgress.style.width = "100%"
     }
     else {
         currentNum.classList.remove('warning-limit')
