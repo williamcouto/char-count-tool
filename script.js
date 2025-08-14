@@ -4,7 +4,6 @@ let char = document.getElementById('stat-char')
 let numStat = document.getElementById('stat-numbers')
 let lines = document.getElementById('stat-lines')
 let space = document.getElementById('stat-spaces')
-
 let progressBar = document.querySelector('.progress-bar')
 let fillProgress = document.querySelector('.progress-bar-fill')
 fillProgress.style.width = 0
@@ -15,6 +14,7 @@ let counter = document.querySelector('[data-counter]')
 let select = document.getElementById('sel-plataform')
 let limitPlataform = document.querySelector('[data-limit]')
 let currentNum = document.querySelector('[data-current]')
+let chips = document.querySelectorAll('.btn-chips')
 
 // Limpar a area de texto
 function clearTextarea() {
@@ -89,8 +89,8 @@ function countNumberStat() {
 
 function updateProgressBar(textareaUser) {
     const limitNum = Number(limitPlataform.dataset.limit)
-    
     let percent = (textareaUser / limitNum) * 100
+
     fillProgress.style.width = percent + '%'
     fillProgress.value = Math.min(percent, 100)
 
@@ -114,6 +114,20 @@ function updateProgressBar(textareaUser) {
     }
 }
 
+// Lógica dos botões de limite
+chips.forEach(chip => {
+    chip.addEventListener('click', () => {
+        chips.forEach(c => c.classList.remove('active'))
+        chip.classList.add('active')
+        //Atualizando valores
+        limitPlataform.dataset.limit = chip.dataset.limit
+        limitPlataform.textContent = chip.dataset.limit
+
+        updateProgressBar(textarea.value.length)
+        
+    })
+})
+
 let textNotification = new Notyf({
     duration: 2000,
     position: {
@@ -134,18 +148,6 @@ let textNotification = new Notyf({
             background: "#16A43A"
         }
     ]
-})
-
-
-select.addEventListener('change', (Event) => {
-    const newLimit = Event.target.value
-    limitPlataform.dataset.limit = newLimit
-    limitPlataform.textContent = newLimit
-    updateProgressBar(textarea.value.length)
-    textNotification.open({
-        type: "success",
-        message: "Limite definido!"
-    })
 })
 
 textarea.addEventListener('input', () => {
