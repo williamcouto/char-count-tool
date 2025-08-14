@@ -94,11 +94,8 @@ select {
      padding: 3px;
 }
 #btn-clear:hover{
-     background-color: #000;
+     background-color: var(--color-error);
      color: #fff;
-}
-.bx-trash{
-     padding-right: 4px;
 }
 textarea {
      font-family: "Roboto", Arial, Helvetica, sans-serif;
@@ -173,4 +170,11 @@ progress{
      background-color: var(--color-elements);
      color: #fff;
      font-weight: bold;
+}
+
+.bxl{
+     font-size: 1.6em;
+}
+.bx, .bxl{
+     padding-right: 6px;
 }
