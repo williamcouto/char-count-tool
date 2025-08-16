@@ -124,7 +124,10 @@ chips.forEach(chip => {
         limitPlataform.textContent = chip.dataset.limit
 
         updateProgressBar(textarea.value.length)
-        
+        textNotification.open({
+            type: "success",
+            message: "Limite definido!"
+        })
     })
 })
 
