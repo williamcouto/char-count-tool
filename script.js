@@ -28,7 +28,7 @@ function clearTextarea() {
     currentNum.classList.remove('warning-limit')
     progress.value = 0
     fillProgress.style.width = "0"
-    fillProgress.style.backgroundColor = '#5740C3'
+    //fillProgress.style.backgroundColor = '#5740C3'
 }
 
 // Contagem de caracteres
