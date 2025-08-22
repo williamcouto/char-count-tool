@@ -9,6 +9,7 @@ let fillProgress = document.querySelector('.progress-bar-fill')
 fillProgress.style.width = 0
 
 let btnClear = document.getElementById('btn-clear')
+let btnCopy = document.getElementById('btn-copy')
 let progress = document.querySelector('[data-progress]')
 let counter = document.querySelector('[data-counter]')
 let select = document.getElementById('sel-plataform')
@@ -113,6 +114,20 @@ function updateProgressBar(textareaUser) {
         })
     }
 }
+// função para copiar texto
+async function copyText(){
+    try{
+        let textValue = textarea.value
+        // Se a area estiver vazia
+        if(!textValue){
+            alert("Erro: Campo de texto vazio!")
+        }
+        await navigator.clipboard.writeText(textValue)
+    }
+    catch(error){
+        alert(error)
+    }
+}
 
 // Lógica dos botões de limite
 chips.forEach(chip => {
@@ -165,3 +180,4 @@ textarea.addEventListener('input', () => {
 btnClear.addEventListener('click', () => {
     clearTextarea();
 })
+btnCopy.addEventListener('click', copyText)
