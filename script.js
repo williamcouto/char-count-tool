@@ -123,6 +123,10 @@ async function copyText(){
             alert("Erro: Campo de texto vazio!")
         }
         await navigator.clipboard.writeText(textValue)
+        textNotification.open({
+            type: "success",
+            message: "Copiado para área de transferência!"
+        })
     }
     catch(error){
         alert(error)
