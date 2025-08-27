@@ -3,6 +3,7 @@ let words = document.getElementById('stat-words')
 let char = document.getElementById('stat-char')
 let numStat = document.getElementById('stat-numbers')
 let lines = document.getElementById('stat-lines')
+let hashtags = document.getElementById('stat-hashtag')
 let space = document.getElementById('stat-spaces')
 let progressBar = document.querySelector('.progress-bar')
 let fillProgress = document.querySelector('.progress-bar-fill')
@@ -24,6 +25,7 @@ function clearTextarea() {
     char.textContent = '0'
     space.textContent = '0'
     lines.textContent = '0'
+    hashtags.textContent = '0'
     numStat.textContent = '0'
     currentNum.textContent = '0'
     currentNum.classList.remove('warning-limit')
@@ -86,6 +88,16 @@ function countNumberStat() {
     else {
         numStat.textContent = foundNums.length
     }
+}
+
+// Contagem de Hashtags
+function countHashtags(){
+    let userHashtag = textarea.value
+    let hashtagRegex = userHashtag.match(/\#\w+/g)
+
+    // verifica se a varivel hashtagRegex existe
+    let countRegex = hashtagRegex ? hashtagRegex.length : 0 
+    hashtags.textContent = countRegex
 }
 
 function updateProgressBar(textareaUser) {
@@ -179,6 +191,7 @@ textarea.addEventListener('input', () => {
     countSpaces();
     updateProgressBar(lengthBar);
     countLines();
+    countHashtags();
 })
 
 btnClear.addEventListener('click', () => {
