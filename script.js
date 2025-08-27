@@ -50,7 +50,6 @@ function countWords() {
         words.textContent = 0
         return
     }
-
     let wordsArray = wordUser.split(/\s+/)
     let filteredWords = wordsArray.filter(word => word.length > 0)
     words.textContent = filteredWords.length
@@ -78,16 +77,11 @@ function countSpaces(){
 //Contagem de Números
 function countNumberStat() {
     let numsTextarea = textarea.value
-    let regexNum = new RegExp(/\d/g) //expressão para aceitar cada digito individualmente
-    let foundNums = numsTextarea.match(regexNum)
+    let regexNums = numsTextarea.match(/\d/g)
 
     //Para evitar erro causado por acessar o tamanho de um elemento null
-    if (foundNums == null) {
-        numStat.textContent = 0
-    }
-    else {
-        numStat.textContent = foundNums.length
-    }
+    let countNumRegex = regexNums ? regexNums.length : 0
+    numStat.textContent = countNumRegex 
 }
 
 // Contagem de Hashtags
@@ -103,7 +97,6 @@ function countHashtags(){
 function updateProgressBar(textareaUser) {
     const limitNum = Number(limitPlataform.dataset.limit)
     let percent = (textareaUser / limitNum) * 100
-
     fillProgress.style.width = percent + '%'
     fillProgress.value = Math.min(percent, 100)
 
@@ -114,7 +107,6 @@ function updateProgressBar(textareaUser) {
     else {
         currentNum.classList.remove('warning-limit')
     }
-
     // Calculo de caracteres restantes
     let halfLimitNum = Math.floor(limitNum / 2)
     let charRemain = limitNum - textareaUser
@@ -153,7 +145,6 @@ chips.forEach(chip => {
         //Atualizando valores
         limitPlataform.dataset.limit = chip.dataset.limit
         limitPlataform.textContent = chip.dataset.limit
-
         updateProgressBar(textarea.value.length)
         textNotification.open({
             type: "success",
