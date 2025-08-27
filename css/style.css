@@ -46,12 +46,12 @@ main {
 .sidebar {
      display: grid;
      grid-template-columns: 1fr;
-     align-items: center;
+     align-items: flex-start;
      gap: 1.5em;
      grid-column: 6 / 10;
      background-color: #f8f8f885;
-     padding: 20px;
-     border-radius: 23px;
+     padding: 21px;
+     border-radius: 21px;
 }
 
 .stats-area {
@@ -92,7 +92,7 @@ main {
 }
 
 #btn-clear {
-     width: 85px;
+     width: 88px;
      height: 32px;
      border: 1px solid #000;
      border-radius: 4px;
@@ -202,7 +202,7 @@ textarea {
 
 .bxl {
      font-size: 1.3rem;
-     padding-right: 5px;
+     padding-right: 6px;
 }
 
 #btn-copy{
