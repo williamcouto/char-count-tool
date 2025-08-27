@@ -77,18 +77,18 @@ main {
      font-size: 1em;
      line-height: 1.4em;
      padding: 10px;
-     width: 140px;
-     height: 85px;
+     width: 138px;
+     height: 84px;
      text-align: center;
 }
 
 .card-stat p:nth-child(1) {
      font-weight: bolder;
-     font-size: 1.2em;
+     font-size: 1.3em;
 }
 
 .card-stat p:nth-last-child(1) {
-     color: var(--color-text);
+     color: #181818c4;
 }
 
 #btn-clear {
@@ -179,7 +179,7 @@ textarea {
      justify-content: center;
      align-items: center;
      width: 140px;
-     height: 45px;
+     height: 46px;
      padding: 6px;
      background-color: transparent;
      border: 1px solid var(--color-shadows-elems);
@@ -211,8 +211,8 @@ textarea {
      justify-content: center;
      cursor: pointer;
      padding: 3px;
-     width: 92px;
-     height: 36px;
+     width: 96px;
+     height: 35px;
      border: 1px solid var(--color-shadows-elems);
      border-radius: 6px;
      background-color: #ffff;
@@ -251,6 +251,7 @@ textarea {
           border-radius: 3px;
           font-size: 16px;
           margin-top: 20px;
+          order: 2;
      }
 
      .chip-container {
@@ -275,18 +276,27 @@ textarea {
           order: 4;
      }
 
+     .container-progress{
+          display: flex;
+          flex-direction: column;
+     }
+
      .progress-bar {
           border: 1px solid var(--color-shadows-elems);
           border-radius: 6px;
           height: 20px;
+          margin-top: 34px;
      }
      
      .progress-bar, #char-counter{
-          order: 2;
+          order: 1;
      }
 
      #btn-clear{
           order: 4;
+     }
+     #btn-copy{
+          order: 2;
      }
 
      .card-stat {
