@@ -16,9 +16,14 @@
      <main>
           <section class="container-text">
                <textarea id="user-textarea" placeholder="Comece a digitar seu texto..."></textarea>
-               <button id="btn-copy">
-                    <i class='bx bxs-copy'></i>Copiar
-               </button>
+               <div class="container-buttons-text">
+                    <button class="btn" id="btn-copy">
+                         <i class='bx bxs-copy'></i>Copiar
+                    </button>
+                    <button class="btn" id="btn-clear">
+                         <i class='bx bx-trash'></i>Limpar
+                    </button>
+               </div>
 
                <div class="container-progress">
                     <div class="progress-bar" style="width: 100%" data-progress>
@@ -77,9 +82,7 @@
                          <p>Hashtags</p>
                     </div>
                </section>
-               <button class="btn" id="btn-clear">
-                    <i class='bx bx-trash'></i>Limpar
-               </button>
+               
           </section>
      </main>
      <script src="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.js"></script>
