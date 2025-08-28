@@ -15,13 +15,11 @@
      --color-error: #DC2626;
      --color-success: #16A34A;
 }
-
 header>h1 {
      font-size: 3em;
      padding-left: 13px;
      grid-column: 1 / span 3;
 }
-
 header,
 textarea,
 body,
@@ -30,11 +28,9 @@ select,
 #btn-clear {
      font-family: "Inter", Arial, Helvetica, sans-serif;
 }
-
 body {
      margin: 10px;
 }
-
 main {
      display: grid;
      grid-template-columns: repeat(11, 1fr);
@@ -42,7 +38,6 @@ main {
      justify-items: center;
      gap: 3em;
 }
-
 .sidebar {
      display: grid;
      grid-template-columns: 1fr;
@@ -53,7 +48,6 @@ main {
      padding: 21px;
      border-radius: 21px;
 }
-
 .stats-area {
      display: grid;
      grid-template-columns: 1fr;
@@ -62,11 +56,9 @@ main {
      align-items: start;
      justify-content: center;
 }
-
 .stats-area>h2 {
      grid-column: span 2;
 }
-
 .card-stat {
      display: flex;
      flex-direction: column;
@@ -81,31 +73,13 @@ main {
      height: 84px;
      text-align: center;
 }
-
 .card-stat p:nth-child(1) {
      font-weight: bolder;
      font-size: 1.3em;
 }
-
 .card-stat p:nth-last-child(1) {
      color: #181818c4;
 }
-
-#btn-clear {
-     width: 88px;
-     height: 32px;
-     border: 1px solid #000;
-     border-radius: 4px;
-     cursor: pointer;
-     background-color: transparent;
-     padding: 3px;
-}
-
-#btn-clear:hover {
-     background-color: var(--color-error);
-     color: #fff;
-}
-
 textarea {
      font-family: "Roboto", Arial, Helvetica, sans-serif;
      width: 760px;
@@ -117,33 +91,28 @@ textarea {
      font-size: 16px;
      grid-column: 1 / span 9;
 }
-
 .container-text {
      display: flex;
      flex-direction: column;
      align-items: flex-start;
      gap: 8px;
 }
-
 .container-progress-bar {
      display: flex;
      justify-content: center;
      align-items: center;
      gap: 20px;
 }
-
 #char-counter {
      font-weight: bold;
      font-size: 1.2em;
      padding: 3px;
      padding-left: 16px;
 }
-
 .warning-limit {
      color: var(--color-error);
      transition: 0.4s ease-out;
 }
-
 .progress-bar {
      display: flex;
      flex-direction: row;
@@ -152,21 +121,18 @@ textarea {
      height: 27px;
      background-color: #f8f8f873;
 }
-
 .container-progress{
      width: 100%;
      display: flex;
      flex-direction: row;
      align-items: center;
 }
-
 .progress-bar-fill {
      background-color: var(--color-elements);
      height: 100%;
      border-radius: 6px;
      transition: width ease-in 0.3s;
 }
-
 .chip-container {
      display: grid;
      grid-template-columns: 1fr 1fr;
@@ -174,6 +140,7 @@ textarea {
      gap: 6px;
 }
 
+/*Estilização de Buttons e Chips*/
 .btn-chips {
      display: flex;
      justify-content: center;
@@ -187,25 +154,25 @@ textarea {
      border-radius: 6px;
      font-family: "Inter", Arial, sans-serif;
 }
-
 .btn-chips:hover {
      background-color: var(--color-elements);
      color: #fff;
 }
-
 /*classe para o botão ativado*/
 .active {
      background-color: var(--color-elements);
      color: #fff;
      font-weight: bold;
 }
-
 .bxl {
      font-size: 1.3rem;
      padding-right: 6px;
 }
-
-#btn-copy{
+#btn-clear:hover {
+     background-color: var(--color-error);
+     color: #fff;
+}
+.btn{
      display: flex;
      align-items: center;
      justify-content: center;
@@ -221,7 +188,17 @@ textarea {
      font-size: 1.4em;
      font-family: "Inter", Arial, Helvetica, sans-serif;
      color: #000;
-     padding-right: 7px;
+}
+.bx{
+     padding: 4px;
+}
+.container-buttons-text{
+     display: flex;
+     flex-direction: row;
+     align-items: center;
+     justify-content: center;
+     gap: 12px;
+     margin-top: 8px;
 }
 
 /*MEDIA QUERY*/
