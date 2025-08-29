@@ -88,6 +88,7 @@ textarea {
      border: 1px solid var(--color-shadows-elems);
      border-radius: 4px;
      margin-top: 12px;
+     box-shadow: inset 0px 0px 26px -16px rgba(135, 135, 135, 0.274);
      font-size: 16px;
      grid-column: 1 / span 9;
 }
@@ -120,6 +121,7 @@ textarea {
      border-radius: 6px;
      height: 27px;
      background-color: #f8f8f873;
+     box-shadow: inset 0px 0px 11px -5px rgba(0, 0, 0, 0.295);
 }
 .container-progress{
      width: 100%;
@@ -221,7 +223,7 @@ textarea {
      }
       textarea {
           width: 310px;
-          height: 300px;
+          height: 350px;
           padding: 10px;
           border: 1px solid var(--color-shadows-elems);
           border-radius: 3px;
@@ -254,8 +256,8 @@ textarea {
      .progress-bar {
           border: 1px solid var(--color-shadows-elems);
           border-radius: 6px;
-          height: 20px;
-          margin-top: 34px;
+          margin-top: 15%;
+          height: 28px;
      }
      .container-buttons-text{
           gap: 11px;
@@ -272,9 +274,20 @@ textarea {
           width: 153px;
           height: 85px;
      }
+     .btn-chips{
+          width: 140px;
+          height: 51px;
+          padding: 5px;
+     }
      .btn{
           width: 100px;
           height: 43px;
      }
-
+     .bx{
+          font-size: 1.6em;
+     }
+     .bxl {
+          font-size: 1.7em;
+          padding-right: 6px;
+     }
 }
