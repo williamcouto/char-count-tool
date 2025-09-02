@@ -16,6 +16,7 @@
      --color-text-card: #181818c4;
      --color-counter: #000;
      --color-shadows-elems: #00000033;
+     --color-text-bttns: #222222;
      --bg-cards: #fff;
      --bg-chips: #fdfbfa;
      --border-chips: #5c1a0257;
@@ -24,6 +25,22 @@
      --color-error: #DC2626;
      --color-success: #16A34A;
      color-scheme: light;
+}
+/*DARK SCHEME*/
+:root[data-theme="dark"]{
+     --color-background: #0D1117;
+     --color-elements: #e64004;
+     --color-sidebar: #1A1F24;
+     --color-text-bttns: #ffffff;
+     --color-text-card: #000000e3;
+     --color-counter: #000;
+     --border-chips: #00000069;
+     --bg-chips: #45515F;
+     --bg-cards: #DBE0E6;
+     --bg-progress-bar: #253141;
+     --bg-button-theme: #1b232f;
+     --bg-buttons: #222222;
+     color-scheme: dark;
 }
 header{
      display: flex;
@@ -190,6 +207,9 @@ textarea {
 #btn-clear:hover {
      background-color: var(--color-error);
      color: #fff;
+}
+#btn-copy, #btn-clear{
+     color: var(--color-text-bttns);
 }
 .btn{
      display: flex;
