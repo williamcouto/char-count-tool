@@ -18,6 +18,11 @@ let limitPlataform = document.querySelector('[data-limit]')
 let currentNum = document.querySelector('[data-current]')
 let chips = document.querySelectorAll('.btn-chips')
 
+let theme = document.querySelector('[data-theme]')
+let btnDark = document.getElementById('btn-dark-theme')
+let btnLight = document.getElementById('btn-light-theme')
+let btnTheme = document.querySelector('.btn-scheme')
+
 // Limpar a area de texto
 function clearTextarea() {
     textarea.value = ''
@@ -31,7 +36,6 @@ function clearTextarea() {
     currentNum.classList.remove('warning-limit')
     progress.value = 0
     fillProgress.style.width = "0"
-    //fillProgress.style.backgroundColor = '#5740C3'
 }
 
 // Contagem de caracteres
@@ -137,6 +141,22 @@ async function copyText(){
     }
 }
 
+// função para troca de temas
+function changeScheme(){
+    let currentScheme = theme.getAttribute('data-theme')
+
+    if(currentScheme == "dark"){
+        theme.setAttribute('data-theme', 'light')
+        btnLight.classList.add('hidden')
+        btnDark.classList.remove('hidden')
+    }
+    else {
+        theme.setAttribute('data-theme', 'dark')
+        btnLight.classList.remove('hidden')
+        btnDark.classList.add('hidden')
+    }
+}
+
 // Lógica dos botões de limite
 chips.forEach(chip => {
     chip.addEventListener('click', () => {
@@ -189,3 +209,4 @@ btnClear.addEventListener('click', () => {
     clearTextarea();
 })
 btnCopy.addEventListener('click', copyText)
+btnTheme.addEventListener('click', changeScheme)
