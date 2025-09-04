@@ -18,7 +18,7 @@
      --color-text-bttns: #222222;
      --bg-hover-theme-btn: #ffffff7e;
      --bg-cards: #fff;
-     --bg-chips: #fdfbfa;
+     --bg-chips: #ffffff;
      --border-chips: #5c1a0257;
      --bg-buttons: #fcfcfc;
      --bg-progress-bar: #f8f8f8;
@@ -62,6 +62,7 @@ html {
 body {
      background-color: var(--color-background);
      margin: 10px;
+     transition: background-color ease 0.3s;
 }
 main {
      display: grid;
@@ -74,17 +75,18 @@ main {
      display: grid;
      grid-template-columns: 1fr;
      align-items: flex-start;
-     gap: 1.5em;
+     gap: 1.7em;
      grid-column: 6 / 10;
      background-color: var(--color-sidebar);
      padding: 21px;
-     border-radius: 21px;
+     border-radius: 17px;
+     border: 1px solid var(--color-shadows-elems);
 }
 .stats-area {
      display: grid;
      grid-template-columns: 1fr;
      grid-template-rows: 1fr;
-     gap: 8px;
+     gap: 7px;
      align-items: start;
      justify-content: center;
 }
@@ -97,6 +99,7 @@ main {
      justify-content: center;
      background-color: var(--bg-cards);
      border: 1px solid #00000028;
+     box-shadow: inset 3px 3px 13px -7px rgba(0, 0, 0, 0.090);
      border-radius: 3px;
      font-size: 1em;
      line-height: 1.4em;
@@ -121,7 +124,6 @@ textarea {
      border: 1px solid var(--color-shadows-elems);
      border-radius: 4px;
      margin-top: 12px;
-     box-shadow: inset 0px 0px 26px -16px rgba(135, 135, 135, 0.274);
      font-size: 16px;
      grid-column: 1 / span 9;
 }
@@ -174,17 +176,16 @@ textarea {
      align-items: center;
      gap: 6px;
 }
-
-/*Estilização de Buttons e Chips*/
 .btn-chips {
      display: flex;
      justify-content: center;
      align-items: center;
      width: 140px;
-     height: 46px;
+     height: 47px;
      padding: 6px;
-     background-color: transparent;
+     background-color: var(--bg-chips);
      border: 1px solid var(--color-shadows-elems);
+     box-shadow: inset 2px -1px 13px -7px rgba(0, 0, 0, 0.054);
      cursor: pointer;
      border-radius: 6px;
      font-family: "Inter", Arial, sans-serif;
@@ -200,7 +201,7 @@ textarea {
      font-weight: bold;
 }
 .bxl {
-     font-size: 1.3rem;
+     font-size: 1.4rem;
      padding-right: 6px;
 }
 #btn-clear:hover {
