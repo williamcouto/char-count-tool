@@ -8,7 +8,7 @@
 }
 
 :root {
-     --color-elements: #e64004;
+     --color-elements: #540D6E;
      --color-background: #F8F9FA;
      --color-sidebar: #ffff;
      --color-text: #2c2c2c;
@@ -29,16 +29,16 @@
 /*DARK SCHEME*/
 :root[data-theme="dark"]{
      --color-background: #0D1117;
-     --color-elements: #e64004;
+     --color-elements: #9D4EDD;
      --color-sidebar: #1A1F24;
      --color-text-bttns: #ffffff;
-     --color-text-card: #000000e3;
-     --color-counter: #000;
+     --color-text-card: #E6EDF3;
+     --color-counter: #ffffff;
      --border-chips: #00000069;
      --bg-hover-theme-btn: #444;
      --bg-chips: #45515F;
-     --bg-cards: #DBE0E6;
-     --bg-progress-bar: #253141;
+     --bg-cards: #2B333B;
+     --bg-progress-bar: #1E2734;
      --bg-button-theme: #1b232f;
      --bg-buttons: #222222;
      color-scheme: dark;
@@ -79,7 +79,7 @@ main {
      grid-column: 6 / 10;
      background-color: var(--color-sidebar);
      padding: 21px;
-     border-radius: 17px;
+     border-radius: 15px;
      border: 1px solid var(--color-shadows-elems);
 }
 .stats-area {
@@ -100,7 +100,7 @@ main {
      background-color: var(--bg-cards);
      border: 1px solid #00000028;
      box-shadow: inset 3px 3px 13px -7px rgba(0, 0, 0, 0.090);
-     border-radius: 3px;
+     border-radius: 6px;
      font-size: 1em;
      line-height: 1.4em;
      padding: 10px;
@@ -110,7 +110,7 @@ main {
 }
 .card-stat p:nth-child(1) {
      font-weight: bolder;
-     font-size: 1.4em;
+     font-size: 1.5em;
      color: var(--color-counter);
 }
 .card-stat p:nth-last-child(1) {
@@ -143,7 +143,7 @@ textarea {
      font-weight: bold;
      font-size: 1.2em;
      padding: 3px;
-     padding-left: 16px;
+     padding-left: 17px;
 }
 .warning-limit {
      color: var(--color-error);
@@ -153,10 +153,10 @@ textarea {
      display: flex;
      flex-direction: row;
      border: 1px solid var(--color-shadows-elems);
-     border-radius: 6px;
-     height: 27px;
+     border-radius: 9px;
+     height: 24px;
      background-color: var(--bg-progress-bar);
-     box-shadow: inset 0px 0px 11px -5px rgba(0, 0, 0, 0.295);
+     box-shadow: inset 0px 0px 11px -5px rgba(0, 0, 0, 0.226);
 }
 .container-progress{
      width: 100%;
@@ -167,7 +167,7 @@ textarea {
 .progress-bar-fill {
      background-color: var(--color-elements);
      height: 100%;
-     border-radius: 6px;
+     border-radius: 9px;
      transition: width ease-in 0.3s;
 }
 .chip-container {
