@@ -22,6 +22,7 @@ let theme = document.querySelector('[data-theme]')
 let btnDark = document.getElementById('btn-dark-theme')
 let btnLight = document.getElementById('btn-light-theme')
 let btnTheme = document.querySelector('.btn-scheme')
+let btnExport = document.getElementById("btn-export");
 
 // Limpar a area de texto
 function clearTextarea() {
@@ -122,6 +123,25 @@ function updateProgressBar(textareaUser) {
         })
     }
 }
+
+//Exportação para .txt
+function exportTextUser() {
+    let textareaInput = textarea.value;
+    let text = new Blob([textareaInput], { type: "text/plain" });
+    let file = URL.createObjectURL(text);
+
+    if(textareaInput.length === 0) return
+    let linkTxt = document.createElement("a");
+    linkTxt.textContent = "arquivo.txt";
+    linkTxt.href = file;
+    linkTxt.download = "arquivo.txt";
+    linkTxt.click();
+
+    // Liberando a memoria
+    URL.revokeObjectURL(file)
+}
+
+
 // função para copiar texto
 async function copyText(){
     try{
@@ -196,6 +216,14 @@ let textNotification = new Notyf({
 })
 
 textarea.addEventListener('input', () => {
+    // habilita ou desabilita o botão conforme o conteudo da textarea
+    if(textarea.value.length > 0){
+        btnExport.removeAttribute("disabled")
+    }
+    else{
+        btnExport.setAttribute("disable", true)
+    }
+
     let lengthBar = countCharacter()
     countWords();
     countNumberStat();
@@ -210,3 +238,4 @@ btnClear.addEventListener('click', () => {
 })
 btnCopy.addEventListener('click', copyText)
 btnTheme.addEventListener('click', changeScheme)
+btnExport.addEventListener('click', exportTextUser)
