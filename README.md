@@ -3,8 +3,8 @@ O repositório conta com um contador de caracteres projetado para ajudar produto
 
 ## 🧠 Funcionalidades
 - Limites predefinidos para diferentes redes sociais.
-- Modo escuro
+- Modo claro e escuro
 - Copia para area de transferencia
 - Exportação para arquivo `.txt`
-- Interface moderna e objetiva
-- Notificações e feedback
+- Interface moderna, limpa e objetiva
+- Notificações e feedbacks visuais (via Notfy) 
