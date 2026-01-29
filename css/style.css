@@ -9,7 +9,7 @@
 
 :root {
   --color-elements: #540d6e;
-  --color-background: #fcfcf4;
+  --color-background: #ffffff;
   --color-sidebar: #ffff;
   --color-text: #2c2c2c;
   --color-text-card: #181818c4;
@@ -147,7 +147,7 @@ textarea {
 }
 .warning-limit {
   color: var(--color-error);
-  transition: 0.4s ease-out;
+  transition: 0.3s ease-out;
 }
 .progress-bar {
   display: flex;
